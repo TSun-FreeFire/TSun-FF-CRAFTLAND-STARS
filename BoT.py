@@ -144,8 +144,8 @@ async def proc(u, token_value, code):
 
 def clean_code(s):
     s = s.strip().upper()
-    if s.startswith('#'): s = s[1:]
-    if s.startswith('FREEFIRE'): s = s[8:]
+    # Accept both raw codes and prefixed forms like #FREEFIREXXXXXXXX.
+    s = re.sub(r'^#?FREEFIRE', '', s)
     return s.strip()
 
 def extract_codes(text):
