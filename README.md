@@ -169,5 +169,4 @@ py jwt_fetcher.py
 
 ---
 
-**Created:** May 2026
 **Status:** Production-ready
